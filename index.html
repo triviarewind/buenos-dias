@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buenos Días - Tu fuente de inspiración matutina</title>
+    <meta name="description" content="Buenos Días - Comienza tu día con inspiración y motivación.">
+    <meta name="keywords" content="Buenos Días, inspiración, motivación, frases, imágenes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Buenos Días - Tu fuente de inspiración matutina">
+    <meta property="og:description" content="Comienza tu día con inspiración y motivación.">
+    <meta property="og:image" content="path_to_social_image.jpg">
+    <meta property="og:url" content="https://yourwebsite.github.io">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Firebase SDK -->
+    <!-- (Add Firebase scripts here when integrating) -->
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Buenos Días</h1>
+            <h2>Tu fuente de inspiración matutina</h2>
+        </div>
+        <nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                &#9776;
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#/" class="nav-link">Home</a></li>
+                <li><a href="#/lunes" class="nav-link">Lunes</a></li>
+                <li><a href="#/martes" class="nav-link">Martes</a></li>
+                <li><a href="#/miercoles" class="nav-link">Miércoles</a></li>
+                <li><a href="#/jueves" class="nav-link">Jueves</a></li>
+                <li><a href="#/viernes" class="nav-link">Viernes</a></li>
+                <li><a href="#/sabado" class="nav-link">Sábado</a></li>
+                <li><a href="#/domingo" class="nav-link">Domingo</a></li>
+                <li><a href="#/buenas-noches" class="nav-link">Buenas Noches</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="posts-container" id="posts-container">
+            <!-- Posts will be dynamically loaded here -->
+        </section>
+        <div class="pagination">
+            <button id="load-more">Cargar más</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-menu">
+            <ul>
+                <li><a href="#/about">Sobre Nosotros</a></li>
+                <li><a href="#/contact">Contacto</a></li>
+                <li><a href="#/privacy">Política de Privacidad</a></li>
+                <li><a href="#/terms">Términos y Condiciones</a></li>
+                <li><a href="#/submit" id="submit-post-link">Enviar Publicación</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2023 Buenos Días. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Submit Post Modal -->
+    <div id="submit-post-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal">&times;</span>
+            <h2>Enviar Publicación</h2>
+            <form id="submit-post-form">
+                <div class="form-group">
+                    <label for="post-image">Imagen:</label>
+                    <input type="file" id="post-image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="post-text">Texto:</label>
+                    <textarea id="post-text" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Categoría:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="category" value="lunes"> Lunes</label>
+                        <label><input type="checkbox" name="category" value="martes"> Martes</label>
+                        <label><input type="checkbox" name="category" value="miercoles"> Miércoles</label>
+                        <label><input type="checkbox" name="category" value="jueves"> Jueves</label>
+                        <label><input type="checkbox" name="category" value="viernes"> Viernes</label>
+                        <label><input type="checkbox" name="category" value="sabado"> Sábado</label>
+                        <label><input type="checkbox" name="category" value="domingo"> Domingo</label>
+                        <label><input type="checkbox" name="category" value="buenas-noches"> Buenas Noches</label>
+                    </div>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
